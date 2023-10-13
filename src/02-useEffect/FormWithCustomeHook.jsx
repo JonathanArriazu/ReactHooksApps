@@ -4,7 +4,7 @@ import { useForm } from '../hooks/useForm';
 
 export const FormWithCustomeHook = () => {
 
-    const { formSate, onInputChange, username, email, password } = useForm({
+    const { formSate, onInputChange, username, email, password, onResetForm } = useForm({
         username: '',
         email: '',
         password: ''
@@ -43,6 +43,8 @@ export const FormWithCustomeHook = () => {
             value={password}
             onChange={onInputChange}
         />
+
+        <button className='btn btn-primary mt-2' onClick={onResetForm}>Borrar</button>
 
     </>
   )
