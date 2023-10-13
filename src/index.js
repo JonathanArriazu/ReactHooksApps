@@ -6,6 +6,7 @@ import { CounterApp } from './01-useState/CounterApp';
 import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook';
 import { SimpleForm } from './02-useEffect/SimpleForm';
 import { FormWithCustomeHook } from './02-useEffect/FormWithCustomeHook';
+import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,8 @@ root.render(
     {/* <CounterApp /> */}
     {/* <CounterWithCustomHook /> */}
     {/* <SimpleForm /> */}
-    <FormWithCustomeHook />
+    {/* <FormWithCustomeHook /> */}
+    <MultipleCustomHooks />
   </>
 );
 
