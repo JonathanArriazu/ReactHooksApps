@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useFetch } from '../hooks/useFetch'
-import { useCounter } from '../hooks/useCounter';
+import { useFetch, useCounter } from '../hooks/index'
+import { LoadingQuote } from './LoadingQuote';
+import { Quote } from './Quote';
 
 export const MultipleCustomHooks = () => {
 
@@ -11,31 +12,20 @@ export const MultipleCustomHooks = () => {
 
     /* const {name, gender} = !!data && data[0]; */ // => Si la data tiene un valor, entonces toma la de la primera posicion (que es 0)
 
-    console.log("data:",data, ",isLoading:",isLoading, ",hasError:", hasError)
-
     return (
         <>
             <h1>BreakingBad Quotes</h1>
             <hr />
 
             {
-                isLoading ? (
-                    <div className='alert alert-info text-center'>
-                        Loading...
-                    </div>
-                 ) : (
-                    <blockquote className='blockquote text-center'>
-                        <img src={data.image} alt="" />
-                        <p className='mb-1'>{data.name}</p>
-                        <footer className='blockquote-footer'>{data.gender}</footer>
-                    </blockquote>
-                 )
+                isLoading ? <LoadingQuote/> : <Quote data={data}/>
             }
 
             <button 
+                className='btn btn-primary'
                 onClick={() => {increment(1)}}
                 disabled={isLoading}
-            >Generar id</button>
+            >Siguiente Personaje</button>
         </>
     )
 }
