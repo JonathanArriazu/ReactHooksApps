@@ -7,6 +7,7 @@ import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook';
 import { SimpleForm } from './02-useEffect/SimpleForm';
 import { FormWithCustomeHook } from './02-useEffect/FormWithCustomeHook';
 import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks';
+import { FocusScreen } from './04-useRef/FocusScreen';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     {/* <CounterWithCustomHook /> */}
     {/* <SimpleForm /> */}
     {/* <FormWithCustomeHook /> */}
-    <MultipleCustomHooks />
+    {/* <MultipleCustomHooks /> */}
+    <FocusScreen />
   </>
 );
 
