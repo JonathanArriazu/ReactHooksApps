@@ -9,8 +9,12 @@ const init = () => {
 
 export const useTodos = () => {
 
+    //El primer argumento es nuestro reducer, el segundo nuestro estado inicial y el 3ero el inicializador, el 
+    //  cual inicializa a nuestro reducer
     const [todoState, dispatch] = useReducer(todoReducer, [], init)
 
+
+    //Cuando el todoState cambia, quiero guardarlo en el localStorage
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todoState) || []);
     }, [todoState])
@@ -55,3 +59,4 @@ export const useTodos = () => {
         handleToggleTodo
     }
 } 
+
